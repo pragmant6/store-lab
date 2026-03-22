@@ -13,7 +13,7 @@ const ProfileSchema = Yup.object().shape({
 });
 
 export const Profile = () => {
-	const { user, login } = useAuth(); // Usamos login para refrescar la sesión local
+	const { user } = useAuth(); // Usamos login para refrescar la sesión local
 	const { addToast } = useToast();
 
 	if (!user) return null;

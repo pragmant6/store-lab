@@ -1,5 +1,5 @@
 import { useMyPurchases } from '../hooks/usePurchases';
-import { ShoppingBag, Calendar, DollarSign, PackageCheck } from 'lucide-react';
+import { ShoppingBag, Calendar, PackageCheck } from 'lucide-react';
 
 export const Purchases = () => {
 	const { data: purchases, isLoading } = useMyPurchases();

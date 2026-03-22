@@ -1,11 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import {
-	LayoutDashboard,
-	ShoppingBag,
-	User,
-	//Settings,
-	LogOut,
-} from 'lucide-react';
+import { LayoutDashboard, ShoppingBag, User, LogOut } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 export const Sidebar = () => {
@@ -19,7 +13,6 @@ export const Sidebar = () => {
 			icon: <ShoppingBag size={20} />,
 		},
 		{ name: 'Perfil', path: '/profile', icon: <User size={20} /> },
-		/*{ name: 'Ajustes', path: '/settings', icon: <Settings size={20} /> }*/
 	];
 
 	return (
@@ -45,10 +38,8 @@ export const Sidebar = () => {
 									: 'hover:bg-slate-800 hover:text-white'
 							}
             `}>
-						<span
-							className={({ isActive }: any) =>
-								isActive ? 'text-white' : 'text-slate-500'
-							}>
+						{/* El icono hereda el color del NavLink padre (blanco si está activo) */}
+						<span className='flex items-center justify-center transition-colors'>
 							{item.icon}
 						</span>
 						{item.name}
